@@ -36,11 +36,28 @@ final class WatchBridge: NSObject, WCSessionDelegate {
         guard let session, session.isReachable else { return }
         session.sendMessage(["refresh": true], replyHandler: nil, errorHandler: { _ in })
     }
+    #if os(watchOS)
+    @MainActor func waitForPendingContent() async {
+        guard let session else { return }
+        var activation: NSKeyValueObservation?
+        var content: NSKeyValueObservation?
+        let changes = AsyncStream<Void> { continuation in
+            activation = session.observe(\.activationState, options: [.initial, .new]) { _, _ in continuation.yield(()) }
+            content = session.observe(\.hasContentPending, options: [.initial, .new]) { _, _ in continuation.yield(()) }
+        }
+        defer { activation?.invalidate(); content?.invalidate() }
+        for await _ in changes {
+            if Task.isCancelled || (session.activationState == .activated && !session.hasContentPending) { break }
+        }
+    }
+    #endif
     private func receive(_ context: [String: Any]) {
         guard let data = context["snapshot"] as? Data,
               let envelope = try? JSONDecoder().decode(SnapshotEnvelope.self, from: data), envelope.schemaVersion == 1,
               (try? envelope.preferences.goal.validated()) != nil else { return }
-        DispatchQueue.main.async { [weak self] in self?.onReceive?(envelope) }
+        // Finish the tiny local persistence operation before WC marks delivery complete.
+        if Thread.isMainThread { onReceive?(envelope) }
+        else { DispatchQueue.main.sync { [weak self] in self?.onReceive?(envelope) } }
     }
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
         receive(session.receivedApplicationContext)

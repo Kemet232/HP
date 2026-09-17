@@ -62,6 +62,8 @@ Observers are registered at launch after onboarding, with hourly background deli
 
 The iPhone is the **canonical calculation owner**. WatchConnectivity `updateApplicationContext` sends only preferences and the latest immutable derived state. The Watch uses precisely that state; it does not compute a potentially different balance from incompletely synced Watch nutrition data. HealthKit continues to synchronize underlying activity through Apple's normal mechanisms.
 
+A SwiftUI WatchConnectivity background task waits for session activation and pending transfers to finish, using KVO events rather than polling. Received snapshots are persisted before the delivery delegate returns.
+
 The Watch has one scrollable screen, protected local cache, a reachable-phone refresh button, and explicit offline/old-snapshot presentation. It needs the iPhone for onboarding and new calculations. It is not an independent Watch app. Watch App Groups share data with its own complication extension only; they do not magically span devices. Cross-device transfer is explicitly performed through WatchConnectivity.
 
 Phone widgets support small, medium and lock-screen accessory families. Watch complications support circular, rectangular, inline and corner families. Timeline entries mark aged state and clear yesterday's balance at local midnight. `WidgetCenter` requests a reload after state delivery; 30-minute timeline refresh is a system-controlled request, not a guarantee. Watch and iPhone may temporarily show snapshots of different ages while disconnected. Timestamps communicate that limitation.

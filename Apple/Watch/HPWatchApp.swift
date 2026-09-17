@@ -27,6 +27,7 @@ import HPCore
         bridge.onStatus = { [weak self] in self?.reachable = self?.bridge.reachable ?? false }
     }
     func refresh() { bridge.requestRefresh() }
+    func completeBackgroundDelivery() async { await bridge.waitForPendingContent() }
 }
 @main struct HPWatchApp: App {
     @State private var model = WatchModel()
@@ -36,6 +37,7 @@ import HPCore
             WatchHomeView(model: model)
                 .onChange(of: phase) { _, phase in if phase == .active { model.refresh() } }
         }
+        .backgroundTask(.watchConnectivity) { await model.completeBackgroundDelivery() }
     }
 }
 struct WatchHomeView: View {

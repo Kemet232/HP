@@ -72,6 +72,7 @@ public struct GoalConfiguration: Codable, Sendable, Equatable {
         return try Self(goal: goal, dailyMagnitude: Int((kilograms * 7700 / 7).rounded()))
     }
     public func validated() throws -> Self {
+        guard (-750...750).contains(dailyAdjustment) else { throw InputError.invalidGoal }
         let result = try Self(goal: goal, dailyMagnitude: abs(dailyAdjustment), proteinGramsPerKG: proteinGramsPerKG)
         guard result.dailyAdjustment == dailyAdjustment else { throw InputError.invalidGoal }
         return result

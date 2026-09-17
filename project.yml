@@ -130,11 +130,24 @@ targets:
       path: Config/Complications.entitlements
       properties:
         com.apple.security.application-groups: [group.com.kemet.hp]
+  HPUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources: [UITests]
+    dependencies:
+      - target: HP
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.kemet.hp.uitests
+        GENERATE_INFOPLIST_FILE: YES
+        TEST_TARGET_NAME: HP
 schemes:
   HP:
     build:
       targets:
         HP: all
+    test:
+      targets: [HPUITests]
   HPWatch:
     build:
       targets:

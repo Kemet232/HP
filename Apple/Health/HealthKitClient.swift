@@ -59,13 +59,12 @@ final class HealthKitClient {
         case (_, .failure):
             input.food = .unavailable(.conflictingSources); input.protein = .unavailable(.conflictingSources)
         case (_, .success(let id)):
-            if let id, !sources.contains(where: { $0.bundleIdentifier == id }) {
-                input.food = .unavailable(.noDataOrReadAccess); input.protein = .unavailable(.noDataOrReadAccess)
-            } else {
-                let source = sources.first { $0.bundleIdentifier == id }
+            if let id, let source = sources.first(where: { $0.bundleIdentifier == id }) {
                 async let food = amount(.dietaryEnergyConsumed, unit: .kilocalorie(), day: day, now: now, source: source, as: Kilocalories.self)
                 async let protein = amount(.dietaryProtein, unit: .gram(), day: day, now: now, source: source, as: Grams.self)
                 input.food = await food; input.protein = await protein
+            } else {
+                input.food = .unavailable(.noDataOrReadAccess); input.protein = .unavailable(.noDataOrReadAccess)
             }
         }
         return Result(input: input, sources: sources.map { NutritionSource(id: $0.bundleIdentifier, name: $0.name) }.sorted { $0.name < $1.name })

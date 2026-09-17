@@ -13,13 +13,16 @@
 		1670E3FB64971A034D93FFAE /* HPStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAE9BFBB06FA19C57BDBD60 /* HPStyle.swift */; };
 		1C253684FFB75D1B4E30F34F /* HPCore in Frameworks */ = {isa = PBXBuildFile; productRef = 61087123E07AD4EAADEE2B09 /* HPCore */; };
 		201DCA4A75D70C7E6B7BE8BF /* HPApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6CD4CD174280E73287E111 /* HPApp.swift */; };
+		20CC48022D8C99755D642AFD /* DebugScenarios.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECE2519B1DC0E13D6B565AF /* DebugScenarios.swift */; };
 		25BD4E94FB27FF61038A918B /* HPCore in Frameworks */ = {isa = PBXBuildFile; productRef = 3C7AEF1DEBAE65F14ACDC129 /* HPCore */; };
 		27804B520C23548C79EE95C8 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = C818ABF73022830E62375F76 /* PrivacyInfo.xcprivacy */; };
+		28B6161A2F315A07C2BC13D2 /* DebugScenarios.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECE2519B1DC0E13D6B565AF /* DebugScenarios.swift */; };
 		315E14D6A89E021F417AAA64 /* HPWidgets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073E3BB2C826722B3388358 /* HPWidgets.swift */; };
 		3D3040BA4D8B1ED60FE37E97 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = C818ABF73022830E62375F76 /* PrivacyInfo.xcprivacy */; };
 		3E65F454A6054D52AF5964FC /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = C818ABF73022830E62375F76 /* PrivacyInfo.xcprivacy */; };
 		46D9C5AA2BA24546CD51A954 /* SnapshotCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = E778714C055493B0AFCBC6C7 /* SnapshotCache.swift */; };
 		489F5940DF0978828C74D00B /* HPStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAE9BFBB06FA19C57BDBD60 /* HPStyle.swift */; };
+		5F68951AC5BAA2C0E11A1283 /* HPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0D8B76437093CEB3234241 /* HPUITests.swift */; };
 		64DA359BAA727570C6720DAC /* HPStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAE9BFBB06FA19C57BDBD60 /* HPStyle.swift */; };
 		674F38A83A98C47C9415E9AC /* HPWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2665B70CA7A7BA97D4A83DAA /* HPWatchApp.swift */; };
 		6A3D1C94D6A0FAEDB6AD3B60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6581CC89A5B8AC2EFA18204 /* Assets.xcassets */; };
@@ -29,6 +32,7 @@
 		80E18858CB36DBBDC64D8C61 /* HPCore in Frameworks */ = {isa = PBXBuildFile; productRef = E58652D4DABC270762D26341 /* HPCore */; };
 		87D0EA4991EA4F6D35C277B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99C6EF6A16B3959BA7CF2FDE /* Assets.xcassets */; };
 		9A00D34DD178D22D825936CF /* SnapshotCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = E778714C055493B0AFCBC6C7 /* SnapshotCache.swift */; };
+		AC084C84DF00DA4377D34D30 /* Previews.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AF9BDCE3532DE99CC189A3 /* Previews.swift */; };
 		AC7F5BB906CB43FC4B6D2D8A /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD846784EB447E4A4677612 /* OnboardingView.swift */; };
 		ADFE7F7D155234E28ACB016A /* HPComplications.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = B0D187C927A8A4788C30B874 /* HPComplications.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		AFBB7D06A5876CBDAFBBBAB8 /* SnapshotCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = E778714C055493B0AFCBC6C7 /* SnapshotCache.swift */; };
@@ -50,6 +54,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = F04B8C5DF622BF8691084944;
 			remoteInfo = HPWidgets;
+		};
+		27D0A0CDC25B406AAA36709F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A179601E7B90172FCD4C29BD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F2AB806313069DC4091D4B3D;
+			remoteInfo = HP;
 		};
 		BFFAAFD59FDB10D4BC81691C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -105,6 +116,8 @@
 
 /* Begin PBXFileReference section */
 		03CA54D72FA8AD8751F26CF8 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		0ECE2519B1DC0E13D6B565AF /* DebugScenarios.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugScenarios.swift; sourceTree = "<group>"; };
+		1A05C77EE674325FCBF5DEF2 /* HPUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = HPUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2665B70CA7A7BA97D4A83DAA /* HPWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HPWatchApp.swift; sourceTree = "<group>"; };
 		28393E9C026C11AB9B4070FF /* HPWidgets.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = HPWidgets.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D2D883514CFFF8125C97394 /* HP.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = HP.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,6 +130,8 @@
 		64CC9E359E6021236EBB2B4B /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		7AC65774F1085B5E8034D8FF /* WhyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhyView.swift; sourceTree = "<group>"; };
 		99C6EF6A16B3959BA7CF2FDE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9A0D8B76437093CEB3234241 /* HPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HPUITests.swift; sourceTree = "<group>"; };
+		A0AF9BDCE3532DE99CC189A3 /* Previews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Previews.swift; sourceTree = "<group>"; };
 		AAD87DE51E3F629F02FFE6F8 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		AF04FEA6FCA130C244B18DD8 /* HealthKitClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitClient.swift; sourceTree = "<group>"; };
 		B0D187C927A8A4788C30B874 /* HPComplications.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = HPComplications.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -169,6 +184,7 @@
 			children = (
 				FA2DD525B8AC3CC2F0AD081F /* Apple */,
 				59B8A67EB9DC8E1464E454CD /* Packages */,
+				A1E6916B97581DB332F96EAB /* UITests */,
 				1BCB52035560B0AE7A2550B4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -178,6 +194,7 @@
 			children = (
 				2D2D883514CFFF8125C97394 /* HP.app */,
 				B0D187C927A8A4788C30B874 /* HPComplications.appex */,
+				1A05C77EE674325FCBF5DEF2 /* HPUITests.xctest */,
 				E6AE9EF8A53AD55BD89E605E /* HPWatch.app */,
 				28393E9C026C11AB9B4070FF /* HPWidgets.appex */,
 			);
@@ -208,9 +225,18 @@
 			path = Health;
 			sourceTree = "<group>";
 		};
+		A1E6916B97581DB332F96EAB /* UITests */ = {
+			isa = PBXGroup;
+			children = (
+				9A0D8B76437093CEB3234241 /* HPUITests.swift */,
+			);
+			path = UITests;
+			sourceTree = "<group>";
+		};
 		A9CD01B2E9689D729F3D3029 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				0ECE2519B1DC0E13D6B565AF /* DebugScenarios.swift */,
 				FEAE9BFBB06FA19C57BDBD60 /* HPStyle.swift */,
 				E778714C055493B0AFCBC6C7 /* SnapshotCache.swift */,
 				64C9E45E23B2435EB0D6893F /* WatchBridge.swift */,
@@ -234,6 +260,7 @@
 				506AFE690A6A685F70C97B82 /* HomeView.swift */,
 				5B6CD4CD174280E73287E111 /* HPApp.swift */,
 				CCD846784EB447E4A4677612 /* OnboardingView.swift */,
+				A0AF9BDCE3532DE99CC189A3 /* Previews.swift */,
 				AAD87DE51E3F629F02FFE6F8 /* SettingsView.swift */,
 				7AC65774F1085B5E8034D8FF /* WhyView.swift */,
 			);
@@ -275,6 +302,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		1602D386272FD5600CF0CE81 /* HPUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83A8EC15C37BFD394FFF7287 /* Build configuration list for PBXNativeTarget "HPUITests" */;
+			buildPhases = (
+				C9A6FB48DFB8598BC1A4C127 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DE59C3B362FBE4B08A1C8389 /* PBXTargetDependency */,
+			);
+			name = HPUITests;
+			packageProductDependencies = (
+			);
+			productName = HPUITests;
+			productReference = 1A05C77EE674325FCBF5DEF2 /* HPUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		7B42EB948A81080B4C05D012 /* HPComplications */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F973356D492D666A20EE55D5 /* Build configuration list for PBXNativeTarget "HPComplications" */;
@@ -370,6 +415,11 @@
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
+					1602D386272FD5600CF0CE81 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+						TestTargetID = F2AB806313069DC4091D4B3D;
+					};
 					7B42EB948A81080B4C05D012 = {
 						DevelopmentTeam = "";
 						ProvisioningStyle = Automatic;
@@ -409,6 +459,7 @@
 				FE0E267AA483D79D3D043E7E /* HPWatch */,
 				F04B8C5DF622BF8691084944 /* HPWidgets */,
 				7B42EB948A81080B4C05D012 /* HPComplications */,
+				1602D386272FD5600CF0CE81 /* HPUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -455,6 +506,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20CC48022D8C99755D642AFD /* DebugScenarios.swift in Sources */,
 				1670E3FB64971A034D93FFAE /* HPStyle.swift in Sources */,
 				674F38A83A98C47C9415E9AC /* HPWatchApp.swift in Sources */,
 				46D9C5AA2BA24546CD51A954 /* SnapshotCache.swift in Sources */,
@@ -467,12 +519,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2A6187AD998A6D63121EBF9 /* AppModel.swift in Sources */,
+				28B6161A2F315A07C2BC13D2 /* DebugScenarios.swift in Sources */,
 				AFE0EE25D6EAB8E981F7ABBF /* GoalEditor.swift in Sources */,
 				201DCA4A75D70C7E6B7BE8BF /* HPApp.swift in Sources */,
 				64DA359BAA727570C6720DAC /* HPStyle.swift in Sources */,
 				F7202F75897927514EF67336 /* HealthKitClient.swift in Sources */,
 				E6A0EECBB419C2842698F98B /* HomeView.swift in Sources */,
 				AC7F5BB906CB43FC4B6D2D8A /* OnboardingView.swift in Sources */,
+				AC084C84DF00DA4377D34D30 /* Previews.swift in Sources */,
 				7BF6312BC52D78B3CA40FBFE /* SettingsView.swift in Sources */,
 				F1CCA78ADD57C5A3C4FFEBCF /* SnapshotCache.swift in Sources */,
 				1606CAEC90F67E11578CDA79 /* WatchBridge.swift in Sources */,
@@ -487,6 +541,14 @@
 				489F5940DF0978828C74D00B /* HPStyle.swift in Sources */,
 				315E14D6A89E021F417AAA64 /* HPWidgets.swift in Sources */,
 				9A00D34DD178D22D825936CF /* SnapshotCache.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9A6FB48DFB8598BC1A4C127 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F68951AC5BAA2C0E11A1283 /* HPUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -512,6 +574,11 @@
 			isa = PBXTargetDependency;
 			target = F04B8C5DF622BF8691084944 /* HPWidgets */;
 			targetProxy = 1DBB889F76960CE68ADA2E71 /* PBXContainerItemProxy */;
+		};
+		DE59C3B362FBE4B08A1C8389 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F2AB806313069DC4091D4B3D /* HP */;
+			targetProxy = 27D0A0CDC25B406AAA36709F /* PBXContainerItemProxy */;
 		};
 		F209FBA318A10A6FD4B87FA4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -586,6 +653,23 @@
 			};
 			name = Debug;
 		};
+		52CE988F1BD0C78A9B936207 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kemet.hp.uitests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HP;
+			};
+			name = Release;
+		};
 		58010955197B365DB1223364 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -600,6 +684,23 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.kemet.hp.widgets;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		78A3E094634F7632D1879A69 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kemet.hp.uitests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HP;
 			};
 			name = Debug;
 		};
@@ -808,6 +909,15 @@
 			buildConfigurations = (
 				BFA4E0844A837737FBFD74FD /* Debug */,
 				1A718FA711E348F4B6831571 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		83A8EC15C37BFD394FFF7287 /* Build configuration list for PBXNativeTarget "HPUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78A3E094634F7632D1879A69 /* Debug */,
+				52CE988F1BD0C78A9B936207 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;

@@ -60,12 +60,14 @@ struct HPWidgetView: View {
                         HealthBar(fraction: state?.remainingFraction, status: state?.status ?? .incomplete)
                         Text(isStale ? "Earlier snapshot" : state == nil ? "Open HP" : "Confirmed so far").font(.caption2).foregroundStyle(.secondary)
                     }
+                    #if os(iOS)
                     if family == .systemMedium {
                         VStack(alignment: .leading, spacing: 16) {
                             Text("\(HPStyle.number(state?.eatenKcal)) eaten")
                             Text(state?.proteinText ?? "— g protein")
                         }.font(.subheadline).monospacedDigit()
                     }
+                    #endif
                 }
             }
         }

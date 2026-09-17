@@ -16,7 +16,22 @@ import HPCore
     private var runningRefresh: Task<Void, Never>?
     private var refreshAgain = false
     private var lastInput: DailyInput?
-    init() {
+    private var isDebugSession = false
+    init(debugScenario: String? = nil) {
+        #if DEBUG
+        let args = ProcessInfo.processInfo.arguments
+        if debugScenario != nil || args.contains("--hp-ui-testing") {
+            isDebugSession = true
+            preferences = Preferences()
+            preferences.onboarded = !args.contains("--hp-onboarding")
+            let name = debugScenario ?? args.first(where: { $0.hasPrefix("--hp-scenario=") })?.components(separatedBy: "=").last ?? "normal"
+            lastInput = DebugScenarios.input(name)
+            preferences.goal = try! GoalConfiguration(goal: .lose, dailyMagnitude: 400)
+            state = try? EnergyEngine.calculate(lastInput!, goal: preferences.goal)
+            watchReady = name != "no-watch"
+            return
+        }
+        #endif
         if let cache = SnapshotCache.read() { state = cache.usableState(now: .now); isCached = state != nil }
         bridge.onStatus = { [weak self] in self?.watchReady = self?.bridge.watchReady ?? false }
         bridge.onRefreshRequest = { [weak self] in Task { await self?.refresh() } }
@@ -24,6 +39,7 @@ import HPCore
         if preferences.onboarded { beginObserving() }
     }
     private func beginObserving() {
+        guard !isDebugSession else { return }
         health.observe { [weak self] completion in
             Task { @MainActor in
                 defer { completion() }
@@ -32,6 +48,7 @@ import HPCore
         }
     }
     func authorize() async {
+        guard !isDebugSession else { return }
         message = nil
         do { try await health.requestAuthorization(); beginObserving(); await refresh() }
         catch { message = health.supported ? "Health access couldn’t be requested. Try again, or check HP in Apple Health → Sharing → Apps." : "Apple Health isn’t available on this device." }
@@ -42,6 +59,10 @@ import HPCore
         beginObserving()
     }
     func savePreferences() {
+        if isDebugSession {
+            if let input = lastInput { state = try? EnergyEngine.calculate(input, goal: preferences.goal) }
+            return
+        }
         do {
             _ = try preferences.goal.validated()
             if PreferenceStore.read().nutritionSourceID != preferences.nutritionSourceID { lastInput = nil; state = nil }
@@ -53,6 +74,7 @@ import HPCore
         } catch { message = "Your settings couldn’t be saved. Please try again." }
     }
     func refresh() async {
+        guard !isDebugSession else { return }
         if let runningRefresh {
             refreshAgain = true
             await runningRefresh.value

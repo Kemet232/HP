@@ -1,0 +1,20 @@
+name: Apple builds and domain tests
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Select Xcode
+        run: sudo xcode-select -s /Applications/Xcode_16.4.app/Contents/Developer
+      - name: Domain tests
+        run: swift test --enable-code-coverage
+      - name: Build iPhone, Watch, widgets and complications
+        run: xcodebuild -project HP.xcodeproj -scheme HP -configuration Debug -destination 'generic/platform=iOS Simulator' CODE_SIGNING_ALLOWED=NO build
+      - name: Build Watch independently
+        run: xcodebuild -project HP.xcodeproj -scheme HPWatch -configuration Debug -destination 'generic/platform=watchOS Simulator' CODE_SIGNING_ALLOWED=NO build

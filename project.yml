@@ -1,0 +1,141 @@
+name: HP
+options:
+  bundleIdPrefix: com.kemet
+  deploymentTarget:
+    iOS: '17.0'
+    watchOS: '10.0'
+  createIntermediateGroups: true
+settings:
+  base:
+    SWIFT_VERSION: '5.0'
+    MARKETING_VERSION: '1.0'
+    CURRENT_PROJECT_VERSION: '1'
+    CODE_SIGN_STYLE: Automatic
+    DEVELOPMENT_TEAM: ''
+    ENABLE_USER_SCRIPT_SANDBOXING: YES
+    SWIFT_STRICT_CONCURRENCY: targeted
+packages:
+  HPCore:
+    path: .
+targets:
+  HP:
+    type: application
+    platform: iOS
+    sources:
+      - Apple/iPhone
+      - Apple/Health
+      - Apple/Shared
+      - Apple/Resources
+    dependencies:
+      - package: HPCore
+      - target: HPWidgets
+        embed: true
+      - target: HPWatch
+        embed: true
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.kemet.hp
+        TARGETED_DEVICE_FAMILY: '1'
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+    info:
+      path: Config/iPhone-Info.plist
+      properties:
+        CFBundleDisplayName: HP
+        UILaunchScreen: {}
+        UISupportedInterfaceOrientations: [UIInterfaceOrientationPortrait]
+        NSHealthShareUsageDescription: HP reads resting and active energy, food calories, protein, weight, steps and workouts to show your confirmed daily energy balance. Your health data stays on your devices.
+        CFBundleURLTypes:
+          - CFBundleURLName: com.kemet.hp.today
+            CFBundleURLSchemes: [hp]
+    entitlements:
+      path: Config/HP.entitlements
+      properties:
+        com.apple.developer.healthkit: true
+        com.apple.developer.healthkit.background-delivery: true
+        com.apple.security.application-groups: [group.com.kemet.hp]
+  HPWatch:
+    type: application
+    platform: watchOS
+    sources:
+      - Apple/Watch
+      - Apple/Shared
+      - Apple/WatchResources
+    dependencies:
+      - package: HPCore
+      - target: HPComplications
+        embed: true
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.kemet.hp.watchkitapp
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+    info:
+      path: Config/Watch-Info.plist
+      properties:
+        CFBundleDisplayName: HP
+        WKApplication: true
+        WKCompanionAppBundleIdentifier: com.kemet.hp
+        CFBundleURLTypes:
+          - CFBundleURLName: com.kemet.hp.today
+            CFBundleURLSchemes: [hp]
+    entitlements:
+      path: Config/Watch.entitlements
+      properties:
+        com.apple.security.application-groups: [group.com.kemet.hp]
+  HPWidgets:
+    type: app-extension
+    platform: iOS
+    sources:
+      - Apple/Widgets
+      - Apple/Shared/HPStyle.swift
+      - Apple/Shared/SnapshotCache.swift
+      - Apple/Resources/PrivacyInfo.xcprivacy
+    dependencies:
+      - package: HPCore
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.kemet.hp.widgets
+        TARGETED_DEVICE_FAMILY: '1'
+        APPLICATION_EXTENSION_API_ONLY: YES
+    info:
+      path: Config/Widgets-Info.plist
+      properties:
+        CFBundleDisplayName: HP
+        NSExtension:
+          NSExtensionPointIdentifier: com.apple.widgetkit-extension
+    entitlements:
+      path: Config/Widgets.entitlements
+      properties:
+        com.apple.security.application-groups: [group.com.kemet.hp]
+  HPComplications:
+    type: app-extension
+    platform: watchOS
+    sources:
+      - Apple/Widgets
+      - Apple/Shared/HPStyle.swift
+      - Apple/Shared/SnapshotCache.swift
+      - Apple/Resources/PrivacyInfo.xcprivacy
+    dependencies:
+      - package: HPCore
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.kemet.hp.watchkitapp.complications
+        APPLICATION_EXTENSION_API_ONLY: YES
+    info:
+      path: Config/Complications-Info.plist
+      properties:
+        CFBundleDisplayName: HP
+        NSExtension:
+          NSExtensionPointIdentifier: com.apple.widgetkit-extension
+    entitlements:
+      path: Config/Complications.entitlements
+      properties:
+        com.apple.security.application-groups: [group.com.kemet.hp]
+schemes:
+  HP:
+    build:
+      targets:
+        HP: all
+  HPWatch:
+    build:
+      targets:
+        HPWatch: all

@@ -1,0 +1,862 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		07BD6A6513035AF998A115BF /* HPWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = E6AE9EF8A53AD55BD89E605E /* HPWatch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		131BA5530CCFF12B0B5EE459 /* HPCore in Frameworks */ = {isa = PBXBuildFile; productRef = E6A9306328010FEC04DBF79D /* HPCore */; };
+		1606CAEC90F67E11578CDA79 /* WatchBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C9E45E23B2435EB0D6893F /* WatchBridge.swift */; };
+		1670E3FB64971A034D93FFAE /* HPStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAE9BFBB06FA19C57BDBD60 /* HPStyle.swift */; };
+		1C253684FFB75D1B4E30F34F /* HPCore in Frameworks */ = {isa = PBXBuildFile; productRef = 61087123E07AD4EAADEE2B09 /* HPCore */; };
+		201DCA4A75D70C7E6B7BE8BF /* HPApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6CD4CD174280E73287E111 /* HPApp.swift */; };
+		25BD4E94FB27FF61038A918B /* HPCore in Frameworks */ = {isa = PBXBuildFile; productRef = 3C7AEF1DEBAE65F14ACDC129 /* HPCore */; };
+		27804B520C23548C79EE95C8 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = C818ABF73022830E62375F76 /* PrivacyInfo.xcprivacy */; };
+		315E14D6A89E021F417AAA64 /* HPWidgets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073E3BB2C826722B3388358 /* HPWidgets.swift */; };
+		3D3040BA4D8B1ED60FE37E97 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = C818ABF73022830E62375F76 /* PrivacyInfo.xcprivacy */; };
+		3E65F454A6054D52AF5964FC /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = C818ABF73022830E62375F76 /* PrivacyInfo.xcprivacy */; };
+		46D9C5AA2BA24546CD51A954 /* SnapshotCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = E778714C055493B0AFCBC6C7 /* SnapshotCache.swift */; };
+		489F5940DF0978828C74D00B /* HPStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAE9BFBB06FA19C57BDBD60 /* HPStyle.swift */; };
+		64DA359BAA727570C6720DAC /* HPStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAE9BFBB06FA19C57BDBD60 /* HPStyle.swift */; };
+		674F38A83A98C47C9415E9AC /* HPWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2665B70CA7A7BA97D4A83DAA /* HPWatchApp.swift */; };
+		6A3D1C94D6A0FAEDB6AD3B60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6581CC89A5B8AC2EFA18204 /* Assets.xcassets */; };
+		6AC5E39BC9B7E006945E4D5B /* HPWidgets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073E3BB2C826722B3388358 /* HPWidgets.swift */; };
+		76EC0BBE2AD640782C808BDE /* WhyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC65774F1085B5E8034D8FF /* WhyView.swift */; };
+		7BF6312BC52D78B3CA40FBFE /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD87DE51E3F629F02FFE6F8 /* SettingsView.swift */; };
+		80E18858CB36DBBDC64D8C61 /* HPCore in Frameworks */ = {isa = PBXBuildFile; productRef = E58652D4DABC270762D26341 /* HPCore */; };
+		87D0EA4991EA4F6D35C277B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99C6EF6A16B3959BA7CF2FDE /* Assets.xcassets */; };
+		9A00D34DD178D22D825936CF /* SnapshotCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = E778714C055493B0AFCBC6C7 /* SnapshotCache.swift */; };
+		AC7F5BB906CB43FC4B6D2D8A /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD846784EB447E4A4677612 /* OnboardingView.swift */; };
+		ADFE7F7D155234E28ACB016A /* HPComplications.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = B0D187C927A8A4788C30B874 /* HPComplications.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		AFBB7D06A5876CBDAFBBBAB8 /* SnapshotCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = E778714C055493B0AFCBC6C7 /* SnapshotCache.swift */; };
+		AFE0EE25D6EAB8E981F7ABBF /* GoalEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF53A300B643F9F654A06BB /* GoalEditor.swift */; };
+		B2A6187AD998A6D63121EBF9 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03CA54D72FA8AD8751F26CF8 /* AppModel.swift */; };
+		C02D3C2769FAD016F718B321 /* HPStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAE9BFBB06FA19C57BDBD60 /* HPStyle.swift */; };
+		C7F7D430552F4DBF883ABBAB /* HPWidgets.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 28393E9C026C11AB9B4070FF /* HPWidgets.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D7B569A8E15CDCC2D609252C /* WatchBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C9E45E23B2435EB0D6893F /* WatchBridge.swift */; };
+		E6A0EECBB419C2842698F98B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506AFE690A6A685F70C97B82 /* HomeView.swift */; };
+		F1CCA78ADD57C5A3C4FFEBCF /* SnapshotCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = E778714C055493B0AFCBC6C7 /* SnapshotCache.swift */; };
+		F7202F75897927514EF67336 /* HealthKitClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF04FEA6FCA130C244B18DD8 /* HealthKitClient.swift */; };
+		FC2CF34BBD7C1E63BE275635 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 64CC9E359E6021236EBB2B4B /* PrivacyInfo.xcprivacy */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1DBB889F76960CE68ADA2E71 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A179601E7B90172FCD4C29BD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F04B8C5DF622BF8691084944;
+			remoteInfo = HPWidgets;
+		};
+		BFFAAFD59FDB10D4BC81691C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A179601E7B90172FCD4C29BD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FE0E267AA483D79D3D043E7E;
+			remoteInfo = HPWatch;
+		};
+		EC8FD3A64000C0EA8AA6E8C1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A179601E7B90172FCD4C29BD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B42EB948A81080B4C05D012;
+			remoteInfo = HPComplications;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		49B784F98D8F4B24FCCE81E2 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				07BD6A6513035AF998A115BF /* HPWatch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E53300E4DF324918093C1A7E /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				C7F7D430552F4DBF883ABBAB /* HPWidgets.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED7027F53B4D5C3D66B0A182 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				ADFE7F7D155234E28ACB016A /* HPComplications.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		03CA54D72FA8AD8751F26CF8 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		2665B70CA7A7BA97D4A83DAA /* HPWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HPWatchApp.swift; sourceTree = "<group>"; };
+		28393E9C026C11AB9B4070FF /* HPWidgets.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = HPWidgets.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D2D883514CFFF8125C97394 /* HP.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = HP.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FF53A300B643F9F654A06BB /* GoalEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalEditor.swift; sourceTree = "<group>"; };
+		506AFE690A6A685F70C97B82 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		5B6CD4CD174280E73287E111 /* HPApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HPApp.swift; sourceTree = "<group>"; };
+		60430B665DBBC3C27323E386 /* HP */ = {isa = PBXFileReference; lastKnownFileType = folder; name = HP; path = .; sourceTree = SOURCE_ROOT; };
+		6073E3BB2C826722B3388358 /* HPWidgets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HPWidgets.swift; sourceTree = "<group>"; };
+		64C9E45E23B2435EB0D6893F /* WatchBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchBridge.swift; sourceTree = "<group>"; };
+		64CC9E359E6021236EBB2B4B /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		7AC65774F1085B5E8034D8FF /* WhyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhyView.swift; sourceTree = "<group>"; };
+		99C6EF6A16B3959BA7CF2FDE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AAD87DE51E3F629F02FFE6F8 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		AF04FEA6FCA130C244B18DD8 /* HealthKitClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitClient.swift; sourceTree = "<group>"; };
+		B0D187C927A8A4788C30B874 /* HPComplications.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = HPComplications.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		C818ABF73022830E62375F76 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		CCD846784EB447E4A4677612 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		E6AE9EF8A53AD55BD89E605E /* HPWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HPWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E778714C055493B0AFCBC6C7 /* SnapshotCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotCache.swift; sourceTree = "<group>"; };
+		F6581CC89A5B8AC2EFA18204 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FEAE9BFBB06FA19C57BDBD60 /* HPStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HPStyle.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		15ACA766C0BD3D62C8BC29DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25BD4E94FB27FF61038A918B /* HPCore in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48E149E4F20214817519B6CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				131BA5530CCFF12B0B5EE459 /* HPCore in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7463635A1E892B866B8CE0A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C253684FFB75D1B4E30F34F /* HPCore in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A350153ED92A9DF7DC116886 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80E18858CB36DBBDC64D8C61 /* HPCore in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0A32F74BE9A421FE6FF4527F = {
+			isa = PBXGroup;
+			children = (
+				FA2DD525B8AC3CC2F0AD081F /* Apple */,
+				59B8A67EB9DC8E1464E454CD /* Packages */,
+				1BCB52035560B0AE7A2550B4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1BCB52035560B0AE7A2550B4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2D2D883514CFFF8125C97394 /* HP.app */,
+				B0D187C927A8A4788C30B874 /* HPComplications.appex */,
+				E6AE9EF8A53AD55BD89E605E /* HPWatch.app */,
+				28393E9C026C11AB9B4070FF /* HPWidgets.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		59B8A67EB9DC8E1464E454CD /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				60430B665DBBC3C27323E386 /* HP */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		8A4A2D050B736EB0964A0354 /* Watch */ = {
+			isa = PBXGroup;
+			children = (
+				2665B70CA7A7BA97D4A83DAA /* HPWatchApp.swift */,
+			);
+			path = Watch;
+			sourceTree = "<group>";
+		};
+		A18BBF17286BE583678AE094 /* Health */ = {
+			isa = PBXGroup;
+			children = (
+				AF04FEA6FCA130C244B18DD8 /* HealthKitClient.swift */,
+			);
+			path = Health;
+			sourceTree = "<group>";
+		};
+		A9CD01B2E9689D729F3D3029 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				FEAE9BFBB06FA19C57BDBD60 /* HPStyle.swift */,
+				E778714C055493B0AFCBC6C7 /* SnapshotCache.swift */,
+				64C9E45E23B2435EB0D6893F /* WatchBridge.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		B0F0903B9C337C6B2B873149 /* Widgets */ = {
+			isa = PBXGroup;
+			children = (
+				6073E3BB2C826722B3388358 /* HPWidgets.swift */,
+			);
+			path = Widgets;
+			sourceTree = "<group>";
+		};
+		EAB8ECA82076B1B08F4D06D4 /* iPhone */ = {
+			isa = PBXGroup;
+			children = (
+				03CA54D72FA8AD8751F26CF8 /* AppModel.swift */,
+				3FF53A300B643F9F654A06BB /* GoalEditor.swift */,
+				506AFE690A6A685F70C97B82 /* HomeView.swift */,
+				5B6CD4CD174280E73287E111 /* HPApp.swift */,
+				CCD846784EB447E4A4677612 /* OnboardingView.swift */,
+				AAD87DE51E3F629F02FFE6F8 /* SettingsView.swift */,
+				7AC65774F1085B5E8034D8FF /* WhyView.swift */,
+			);
+			path = iPhone;
+			sourceTree = "<group>";
+		};
+		EE220BE5682EF8D07F24D5DE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F6581CC89A5B8AC2EFA18204 /* Assets.xcassets */,
+				C818ABF73022830E62375F76 /* PrivacyInfo.xcprivacy */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		EFF3657A9677C154AF15B65C /* WatchResources */ = {
+			isa = PBXGroup;
+			children = (
+				99C6EF6A16B3959BA7CF2FDE /* Assets.xcassets */,
+				64CC9E359E6021236EBB2B4B /* PrivacyInfo.xcprivacy */,
+			);
+			path = WatchResources;
+			sourceTree = "<group>";
+		};
+		FA2DD525B8AC3CC2F0AD081F /* Apple */ = {
+			isa = PBXGroup;
+			children = (
+				A18BBF17286BE583678AE094 /* Health */,
+				EAB8ECA82076B1B08F4D06D4 /* iPhone */,
+				EE220BE5682EF8D07F24D5DE /* Resources */,
+				A9CD01B2E9689D729F3D3029 /* Shared */,
+				8A4A2D050B736EB0964A0354 /* Watch */,
+				EFF3657A9677C154AF15B65C /* WatchResources */,
+				B0F0903B9C337C6B2B873149 /* Widgets */,
+			);
+			path = Apple;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7B42EB948A81080B4C05D012 /* HPComplications */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F973356D492D666A20EE55D5 /* Build configuration list for PBXNativeTarget "HPComplications" */;
+			buildPhases = (
+				EFA7A7BA1780BE7644152E1E /* Sources */,
+				C8A42C6F1759DFC6B08F7AD6 /* Resources */,
+				A350153ED92A9DF7DC116886 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HPComplications;
+			packageProductDependencies = (
+				E58652D4DABC270762D26341 /* HPCore */,
+			);
+			productName = HPComplications;
+			productReference = B0D187C927A8A4788C30B874 /* HPComplications.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		F04B8C5DF622BF8691084944 /* HPWidgets */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 21335C685B3442303F413569 /* Build configuration list for PBXNativeTarget "HPWidgets" */;
+			buildPhases = (
+				99AF047609678364922AE032 /* Sources */,
+				DBBE256F6687762DF281B6ED /* Resources */,
+				15ACA766C0BD3D62C8BC29DA /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HPWidgets;
+			packageProductDependencies = (
+				3C7AEF1DEBAE65F14ACDC129 /* HPCore */,
+			);
+			productName = HPWidgets;
+			productReference = 28393E9C026C11AB9B4070FF /* HPWidgets.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		F2AB806313069DC4091D4B3D /* HP */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 39FF94932FAA642BA52FF067 /* Build configuration list for PBXNativeTarget "HP" */;
+			buildPhases = (
+				73FBC84FB7A21ED93E96688C /* Sources */,
+				D1504C14D97B7D196AEFDBD0 /* Resources */,
+				7463635A1E892B866B8CE0A9 /* Frameworks */,
+				E53300E4DF324918093C1A7E /* Embed Foundation Extensions */,
+				49B784F98D8F4B24FCCE81E2 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BE52AD029DA0A047A5041097 /* PBXTargetDependency */,
+				31635FF1426ADADC4FC35B46 /* PBXTargetDependency */,
+			);
+			name = HP;
+			packageProductDependencies = (
+				61087123E07AD4EAADEE2B09 /* HPCore */,
+			);
+			productName = HP;
+			productReference = 2D2D883514CFFF8125C97394 /* HP.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FE0E267AA483D79D3D043E7E /* HPWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 23CBB0C4837359890DE00FBA /* Build configuration list for PBXNativeTarget "HPWatch" */;
+			buildPhases = (
+				4F63534FEEE2DA94EE7B5943 /* Sources */,
+				3F4AB5F7BCDB325DE0A066F3 /* Resources */,
+				48E149E4F20214817519B6CF /* Frameworks */,
+				ED7027F53B4D5C3D66B0A182 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F209FBA318A10A6FD4B87FA4 /* PBXTargetDependency */,
+			);
+			name = HPWatch;
+			packageProductDependencies = (
+				E6A9306328010FEC04DBF79D /* HPCore */,
+			);
+			productName = HPWatch;
+			productReference = E6AE9EF8A53AD55BD89E605E /* HPWatch.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A179601E7B90172FCD4C29BD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					7B42EB948A81080B4C05D012 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+					F04B8C5DF622BF8691084944 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+					F2AB806313069DC4091D4B3D = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+					FE0E267AA483D79D3D043E7E = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = B5FD4820FA8548DCFF0E1318 /* Build configuration list for PBXProject "HP" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 0A32F74BE9A421FE6FF4527F;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				137ADA28589CB0653226248C /* XCLocalSwiftPackageReference "." */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 1BCB52035560B0AE7A2550B4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F2AB806313069DC4091D4B3D /* HP */,
+				FE0E267AA483D79D3D043E7E /* HPWatch */,
+				F04B8C5DF622BF8691084944 /* HPWidgets */,
+				7B42EB948A81080B4C05D012 /* HPComplications */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3F4AB5F7BCDB325DE0A066F3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87D0EA4991EA4F6D35C277B2 /* Assets.xcassets in Resources */,
+				FC2CF34BBD7C1E63BE275635 /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8A42C6F1759DFC6B08F7AD6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E65F454A6054D52AF5964FC /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1504C14D97B7D196AEFDBD0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A3D1C94D6A0FAEDB6AD3B60 /* Assets.xcassets in Resources */,
+				27804B520C23548C79EE95C8 /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBBE256F6687762DF281B6ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D3040BA4D8B1ED60FE37E97 /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4F63534FEEE2DA94EE7B5943 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1670E3FB64971A034D93FFAE /* HPStyle.swift in Sources */,
+				674F38A83A98C47C9415E9AC /* HPWatchApp.swift in Sources */,
+				46D9C5AA2BA24546CD51A954 /* SnapshotCache.swift in Sources */,
+				D7B569A8E15CDCC2D609252C /* WatchBridge.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		73FBC84FB7A21ED93E96688C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2A6187AD998A6D63121EBF9 /* AppModel.swift in Sources */,
+				AFE0EE25D6EAB8E981F7ABBF /* GoalEditor.swift in Sources */,
+				201DCA4A75D70C7E6B7BE8BF /* HPApp.swift in Sources */,
+				64DA359BAA727570C6720DAC /* HPStyle.swift in Sources */,
+				F7202F75897927514EF67336 /* HealthKitClient.swift in Sources */,
+				E6A0EECBB419C2842698F98B /* HomeView.swift in Sources */,
+				AC7F5BB906CB43FC4B6D2D8A /* OnboardingView.swift in Sources */,
+				7BF6312BC52D78B3CA40FBFE /* SettingsView.swift in Sources */,
+				F1CCA78ADD57C5A3C4FFEBCF /* SnapshotCache.swift in Sources */,
+				1606CAEC90F67E11578CDA79 /* WatchBridge.swift in Sources */,
+				76EC0BBE2AD640782C808BDE /* WhyView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99AF047609678364922AE032 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				489F5940DF0978828C74D00B /* HPStyle.swift in Sources */,
+				315E14D6A89E021F417AAA64 /* HPWidgets.swift in Sources */,
+				9A00D34DD178D22D825936CF /* SnapshotCache.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFA7A7BA1780BE7644152E1E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C02D3C2769FAD016F718B321 /* HPStyle.swift in Sources */,
+				6AC5E39BC9B7E006945E4D5B /* HPWidgets.swift in Sources */,
+				AFBB7D06A5876CBDAFBBBAB8 /* SnapshotCache.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		31635FF1426ADADC4FC35B46 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FE0E267AA483D79D3D043E7E /* HPWatch */;
+			targetProxy = BFFAAFD59FDB10D4BC81691C /* PBXContainerItemProxy */;
+		};
+		BE52AD029DA0A047A5041097 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F04B8C5DF622BF8691084944 /* HPWidgets */;
+			targetProxy = 1DBB889F76960CE68ADA2E71 /* PBXContainerItemProxy */;
+		};
+		F209FBA318A10A6FD4B87FA4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B42EB948A81080B4C05D012 /* HPComplications */;
+			targetProxy = EC8FD3A64000C0EA8AA6E8C1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		17B6CF3D9777B825C31F9CDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = Config/Widgets.entitlements;
+				INFOPLIST_FILE = "Config/Widgets-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kemet.hp.widgets;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		1A718FA711E348F4B6831571 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Config/HP.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Config/iPhone-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kemet.hp;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		214100B740ABB493ECD4F460 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = Config/Complications.entitlements;
+				INFOPLIST_FILE = "Config/Complications-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kemet.hp.watchkitapp.complications;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+			};
+			name = Debug;
+		};
+		412FC20C5BCC704BF6D76A57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Config/Watch.entitlements;
+				INFOPLIST_FILE = "Config/Watch-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kemet.hp.watchkitapp;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+			};
+			name = Debug;
+		};
+		58010955197B365DB1223364 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = Config/Widgets.entitlements;
+				INFOPLIST_FILE = "Config/Widgets-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kemet.hp.widgets;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		B0133F937936373A8B352C6D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Config/Watch.entitlements;
+				INFOPLIST_FILE = "Config/Watch-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kemet.hp.watchkitapp;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+			};
+			name = Release;
+		};
+		B84C900C3FDC3837288DBAD5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = Config/Complications.entitlements;
+				INFOPLIST_FILE = "Config/Complications-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kemet.hp.watchkitapp.complications;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+			};
+			name = Release;
+		};
+		BFA4E0844A837737FBFD74FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Config/HP.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Config/iPhone-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kemet.hp;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		C51234787FA62C1AC4C7BD45 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_STRICT_CONCURRENCY = targeted;
+				SWIFT_VERSION = 5.0;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Release;
+		};
+		EA3FFBA7165E8BA19E2F03B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_STRICT_CONCURRENCY = targeted;
+				SWIFT_VERSION = 5.0;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		21335C685B3442303F413569 /* Build configuration list for PBXNativeTarget "HPWidgets" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58010955197B365DB1223364 /* Debug */,
+				17B6CF3D9777B825C31F9CDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		23CBB0C4837359890DE00FBA /* Build configuration list for PBXNativeTarget "HPWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				412FC20C5BCC704BF6D76A57 /* Debug */,
+				B0133F937936373A8B352C6D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		39FF94932FAA642BA52FF067 /* Build configuration list for PBXNativeTarget "HP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFA4E0844A837737FBFD74FD /* Debug */,
+				1A718FA711E348F4B6831571 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		B5FD4820FA8548DCFF0E1318 /* Build configuration list for PBXProject "HP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA3FFBA7165E8BA19E2F03B8 /* Debug */,
+				C51234787FA62C1AC4C7BD45 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		F973356D492D666A20EE55D5 /* Build configuration list for PBXNativeTarget "HPComplications" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				214100B740ABB493ECD4F460 /* Debug */,
+				B84C900C3FDC3837288DBAD5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		137ADA28589CB0653226248C /* XCLocalSwiftPackageReference "." */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = .;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3C7AEF1DEBAE65F14ACDC129 /* HPCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = HPCore;
+		};
+		61087123E07AD4EAADEE2B09 /* HPCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = HPCore;
+		};
+		E58652D4DABC270762D26341 /* HPCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = HPCore;
+		};
+		E6A9306328010FEC04DBF79D /* HPCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = HPCore;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = A179601E7B90172FCD4C29BD /* Project object */;
+}

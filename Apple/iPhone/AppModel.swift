@@ -104,6 +104,7 @@ import HPCore
             state = try EnergyEngine.calculate(result.input, goal: preferences.goal)
             nutritionSources = result.sources
             isCached = false
+            message = nil
             publish()
         } catch { state = nil; message = "Some Health values couldn’t be used. Check the entries in Apple Health."; publish() }
     }

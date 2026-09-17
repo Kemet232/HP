@@ -6,6 +6,7 @@
 - Core line coverage from `llvm-cov`: **EnergyEngine.swift 98.28%**, **Models.swift 98.61%**. These figures cover the pure domain layer, not Apple Health integration.
 - **5 UI tests passed** on iPhone 16 Pro / iOS 18.6 simulator: onboarding without access, over-target balance and Why, goal change, unavailable Health reads, and largest accessibility-size calculation navigation. Fixtures are debug-only, explicitly simulated, and never written to production storage. These tests do not exercise the actual Health authorization sheet.
 - **Debug and Release iPhone schemes built successfully** using Xcode 27.0 (27A266a). The scheme includes Watch app, iPhone widgets and Watch complications. Unsigned simulator builds; no provisioning claim.
+- Watch background transfer completion was added using SwiftUI’s WatchConnectivity task and event-driven session observation. Its Release build passed and the app launched; real background transfers still need paired-device testing.
 - Watch app installed and launched successfully on **Apple Watch Series 12 (46mm) / watchOS 27.0 simulator**, showing its real no-snapshot state.
 - iPhone normal-state and Watch empty-state screenshots visually inspected. iPhone sample values are synthetic debug fixtures. Images are in `Docs/Screenshots`.
 - Source audit found no TODO/FIXME markers, health-value logging or runtime networking APIs. No write permissions or HealthKit save calls. `git diff --check` passed.
@@ -13,7 +14,7 @@
 
 ## GitHub CI
 
-[Xcode 16.4 run 35264221229](https://github.com/Kemet232/HP/actions/runs/35264221229) passed domain tests, all-target iPhone build and independent Watch build. The final workflow also runs the UI suite; consult the latest Actions run for its current result.
+[Xcode 16.4 run 35264713872](https://github.com/Kemet232/HP/actions/runs/35264713872) passed domain tests, all-target iPhone build, independent Watch build and all five simulator UI flows. Subsequent commits are checked by the same workflow; consult the latest Actions run for its current result.
 
 ## Environment observations
 

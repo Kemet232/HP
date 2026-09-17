@@ -111,4 +111,21 @@ struct EnergyEngineTests {
         #expect(decoded.usableState(now: now.addingTimeInterval(86400)) == nil)
         #expect(throws: InputError.self) { try JSONDecoder().decode(EnergyAmount.self, from: Data("-5".utf8)) }
     }
+    @Test func corruptedGoalFailsWithoutIntegerOverflow() throws {
+        let data = Data("{\"goal\":\"lose\",\"dailyAdjustment\":-9223372036854775808,\"proteinGramsPerKG\":2}".utf8)
+        let decoded = try JSONDecoder().decode(GoalConfiguration.self, from: data)
+        #expect(throws: InputError.self) { try decoded.validated() }
+    }
+    @Test func cacheRejectsMismatchedCalculation() throws {
+        let config = try GoalConfiguration(goal: .lose, dailyMagnitude: 400)
+        let state = try EnergyEngine.calculate(input(), goal: config)
+        let envelope = SnapshotEnvelope(preferences: Preferences(), state: state, sentAt: now)
+        #expect(envelope.usableState(now: now) == nil)
+    }
+    @Test func amberBoundary() throws {
+        let state = try EnergyEngine.calculate(input(resting: 1000, active: 0, food: 800), goal: .maintenance)
+        #expect(state.status == .approachingLimit)
+        #expect(try EnergyEngine.calculate(input(resting: 1000, active: 0, food: 799), goal: .maintenance).status == .available)
+    }
+
 }

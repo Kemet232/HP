@@ -17,10 +17,12 @@ The generated Xcode project is committed. To regenerate after structural edits: 
 ```sh
 swift test --enable-code-coverage
 xcodebuild -project HP.xcodeproj -scheme HP -destination 'generic/platform=iOS Simulator' CODE_SIGNING_ALLOWED=NO build
+# UI tests: select an available simulator name with xcrun simctl list devices
+xcodebuild -project HP.xcodeproj -scheme HP -destination 'platform=iOS Simulator,name=iPhone 16 Pro' -parallel-testing-enabled NO CODE_SIGNING_ALLOWED=NO test
 xcodebuild -project HP.xcodeproj -scheme HPWatch -destination 'generic/platform=watchOS Simulator' CODE_SIGNING_ALLOWED=NO build
 ```
 
-GitHub Actions runs the domain tests and unsigned simulator builds. Simulator builds do not verify signing, real HealthKit data delivery or physical Watch behavior.
+GitHub Actions runs domain tests, unsigned simulator builds and five simulator UI tests. Simulator builds do not verify signing, real HealthKit data delivery or physical Watch behavior.
 
 ## The calculation
 
@@ -75,6 +77,8 @@ Phone widgets support small, medium and lock-screen accessory families. Watch co
 - `Apple/Watch`: scrollable Watch experience and snapshot receipt.
 - `Apple/Widgets`: WidgetKit timelines and compact family-specific presentations.
 - `Tests/HPCoreTests`: calculation, duplication, goals, source conflicts, serialization and date-boundary tests.
+- `UITests`: onboarding, negative balance/Why, settings recalculation, unavailable read access and accessibility-size navigation.
+- Debug-only fixtures/previews cover green, amber, red, stale, live, missing and high-activity states. UI fixtures are labelled **SIMULATED · DEBUG**, never persisted and excluded from Release.
 - `Config`: generated Info.plists and entitlements; `project.yml` is their source.
 
 Views do not calculate calorie allowance. Missing core inputs produce an unavailable balance while independently available secondary metrics remain visible. Zero is a real zero sample; unknown, stale, unsupported and query-failure have separate representations. The app deliberately does not claim it can identify denied Health read access.

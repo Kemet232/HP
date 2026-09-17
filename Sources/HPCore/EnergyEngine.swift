@@ -53,6 +53,12 @@ public struct SnapshotEnvelope: Codable, Sendable {
     }
     public func usableState(now: Date, calendar: Calendar = .autoupdatingCurrent) -> DailyEnergyState? {
         guard schemaVersion == 1, let state, state.day.matches(now: now, calendar: calendar), state.queriedAt <= now.addingTimeInterval(60) else { return nil }
-        return state
+        // The cache and paired-device boundary must not bypass domain validation.
+        var input = DailyInput(day: state.day, queriedAt: state.queriedAt)
+        input.resting = state.resting; input.active = state.active; input.food = state.food
+        input.protein = state.protein; input.weight = state.weight; input.steps = state.steps
+        input.workout = state.workout
+        guard let recomputed = try? EnergyEngine.calculate(input, goal: preferences.goal), recomputed == state else { return nil }
+        return recomputed
     }
 }

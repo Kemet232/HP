@@ -86,6 +86,7 @@ targets:
     platform: iOS
     sources:
       - Apple/Widgets
+      - Apple/Shared/DebugScenarios.swift
       - Apple/Shared/HPStyle.swift
       - Apple/Shared/SnapshotCache.swift
       - Apple/Resources/PrivacyInfo.xcprivacy
@@ -111,6 +112,7 @@ targets:
     platform: watchOS
     sources:
       - Apple/Widgets
+      - Apple/Shared/DebugScenarios.swift
       - Apple/Shared/HPStyle.swift
       - Apple/Shared/SnapshotCache.swift
       - Apple/Resources/PrivacyInfo.xcprivacy

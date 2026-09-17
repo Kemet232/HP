@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		07BD6A6513035AF998A115BF /* HPWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = E6AE9EF8A53AD55BD89E605E /* HPWatch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0E541BFFE5E6C5A68BCFC431 /* WidgetPreviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50CEE699B854051794FA1CD /* WidgetPreviews.swift */; };
 		131BA5530CCFF12B0B5EE459 /* HPCore in Frameworks */ = {isa = PBXBuildFile; productRef = E6A9306328010FEC04DBF79D /* HPCore */; };
 		1606CAEC90F67E11578CDA79 /* WatchBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C9E45E23B2435EB0D6893F /* WatchBridge.swift */; };
 		1670E3FB64971A034D93FFAE /* HPStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAE9BFBB06FA19C57BDBD60 /* HPStyle.swift */; };
@@ -22,12 +23,14 @@
 		3E65F454A6054D52AF5964FC /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = C818ABF73022830E62375F76 /* PrivacyInfo.xcprivacy */; };
 		46D9C5AA2BA24546CD51A954 /* SnapshotCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = E778714C055493B0AFCBC6C7 /* SnapshotCache.swift */; };
 		489F5940DF0978828C74D00B /* HPStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAE9BFBB06FA19C57BDBD60 /* HPStyle.swift */; };
+		53C18D4027FF6DD5E03BE390 /* DebugScenarios.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECE2519B1DC0E13D6B565AF /* DebugScenarios.swift */; };
 		5F68951AC5BAA2C0E11A1283 /* HPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0D8B76437093CEB3234241 /* HPUITests.swift */; };
 		64DA359BAA727570C6720DAC /* HPStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAE9BFBB06FA19C57BDBD60 /* HPStyle.swift */; };
 		674F38A83A98C47C9415E9AC /* HPWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2665B70CA7A7BA97D4A83DAA /* HPWatchApp.swift */; };
 		6A3D1C94D6A0FAEDB6AD3B60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6581CC89A5B8AC2EFA18204 /* Assets.xcassets */; };
 		6AC5E39BC9B7E006945E4D5B /* HPWidgets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073E3BB2C826722B3388358 /* HPWidgets.swift */; };
 		76EC0BBE2AD640782C808BDE /* WhyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC65774F1085B5E8034D8FF /* WhyView.swift */; };
+		7A5F4629763630D0911BD07C /* DebugScenarios.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECE2519B1DC0E13D6B565AF /* DebugScenarios.swift */; };
 		7BF6312BC52D78B3CA40FBFE /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD87DE51E3F629F02FFE6F8 /* SettingsView.swift */; };
 		80E18858CB36DBBDC64D8C61 /* HPCore in Frameworks */ = {isa = PBXBuildFile; productRef = E58652D4DABC270762D26341 /* HPCore */; };
 		87D0EA4991EA4F6D35C277B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99C6EF6A16B3959BA7CF2FDE /* Assets.xcassets */; };
@@ -38,6 +41,7 @@
 		AFBB7D06A5876CBDAFBBBAB8 /* SnapshotCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = E778714C055493B0AFCBC6C7 /* SnapshotCache.swift */; };
 		AFE0EE25D6EAB8E981F7ABBF /* GoalEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF53A300B643F9F654A06BB /* GoalEditor.swift */; };
 		B2A6187AD998A6D63121EBF9 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03CA54D72FA8AD8751F26CF8 /* AppModel.swift */; };
+		BD3E0A10BB5B427B04E7A3F4 /* WidgetPreviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50CEE699B854051794FA1CD /* WidgetPreviews.swift */; };
 		C02D3C2769FAD016F718B321 /* HPStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAE9BFBB06FA19C57BDBD60 /* HPStyle.swift */; };
 		C7F7D430552F4DBF883ABBAB /* HPWidgets.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 28393E9C026C11AB9B4070FF /* HPWidgets.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D7B569A8E15CDCC2D609252C /* WatchBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C9E45E23B2435EB0D6893F /* WatchBridge.swift */; };
@@ -137,6 +141,7 @@
 		B0D187C927A8A4788C30B874 /* HPComplications.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = HPComplications.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		C818ABF73022830E62375F76 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		CCD846784EB447E4A4677612 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		E50CEE699B854051794FA1CD /* WidgetPreviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetPreviews.swift; sourceTree = "<group>"; };
 		E6AE9EF8A53AD55BD89E605E /* HPWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HPWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E778714C055493B0AFCBC6C7 /* SnapshotCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotCache.swift; sourceTree = "<group>"; };
 		F6581CC89A5B8AC2EFA18204 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -248,6 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				6073E3BB2C826722B3388358 /* HPWidgets.swift */,
+				E50CEE699B854051794FA1CD /* WidgetPreviews.swift */,
 			);
 			path = Widgets;
 			sourceTree = "<group>";
@@ -538,9 +544,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A5F4629763630D0911BD07C /* DebugScenarios.swift in Sources */,
 				489F5940DF0978828C74D00B /* HPStyle.swift in Sources */,
 				315E14D6A89E021F417AAA64 /* HPWidgets.swift in Sources */,
 				9A00D34DD178D22D825936CF /* SnapshotCache.swift in Sources */,
+				BD3E0A10BB5B427B04E7A3F4 /* WidgetPreviews.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -556,9 +564,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53C18D4027FF6DD5E03BE390 /* DebugScenarios.swift in Sources */,
 				C02D3C2769FAD016F718B321 /* HPStyle.swift in Sources */,
 				6AC5E39BC9B7E006945E4D5B /* HPWidgets.swift in Sources */,
 				AFBB7D06A5876CBDAFBBBAB8 /* SnapshotCache.swift in Sources */,
+				0E541BFFE5E6C5A68BCFC431 /* WidgetPreviews.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

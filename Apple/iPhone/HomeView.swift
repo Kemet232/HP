@@ -14,7 +14,7 @@ struct HomeView: View {
                 ScrollView {
                     VStack(alignment: .leading, spacing: 32) {
                         VStack(alignment: .leading, spacing: 16) {
-                            Text("TODAY, SO FAR").font(.caption.weight(.semibold)).tracking(2).foregroundStyle(.secondary)
+                            Text(model.isDebugSession ? "SIMULATED · DEBUG" : "TODAY, SO FAR").font(.caption.weight(.semibold)).tracking(2).foregroundStyle(.secondary)
                             Button { showWhy = true } label: {
                                 VStack(alignment: .leading, spacing: 0) {
                                     Text(HPStyle.number(state?.caloriesRemaining))

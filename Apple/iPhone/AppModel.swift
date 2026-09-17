@@ -16,7 +16,7 @@ import HPCore
     private var runningRefresh: Task<Void, Never>?
     private var refreshAgain = false
     private var lastInput: DailyInput?
-    private var isDebugSession = false
+    private(set) var isDebugSession = false
     init(debugScenario: String? = nil) {
         #if DEBUG
         let args = ProcessInfo.processInfo.arguments

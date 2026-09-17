@@ -112,8 +112,8 @@ final class HealthKitClient {
                 var interval = DateComponents(); interval.day = 1
                 let query = HKStatisticsCollectionQuery(quantityType: type, quantitySamplePredicate: predicate,
                     options: .cumulativeSum, anchorDate: day.start, intervalComponents: interval)
-                query.initialResultsHandler = { [weak self] query, collection, error in
-                    defer { self?.store.stop(query) }
+                query.initialResultsHandler = { [store] query, collection, error in
+                    defer { store.stop(query) }
                     if let error { continuation.resume(throwing: error) }
                     else { continuation.resume(returning: collection?.statistics(for: day.start)?.sumQuantity()?.doubleValue(for: unit)) }
                 }

@@ -8,7 +8,15 @@ import HPCore
     var reachable = false
     var storageMessage: String?
     private let bridge = WatchBridge()
-    init() {
+    init(debugScenario: String? = nil) {
+        #if DEBUG
+        if let debugScenario {
+            var preferences = Preferences()
+            preferences.goal = try! GoalConfiguration(goal: .lose, dailyMagnitude: 400)
+            snapshot = SnapshotEnvelope(preferences: preferences, state: try? EnergyEngine.calculate(DebugScenarios.input(debugScenario), goal: preferences.goal))
+            return
+        }
+        #endif
         bridge.onReceive = { [weak self] envelope in
             guard let self, envelope.sentAt >= (snapshot?.sentAt ?? .distantPast) else { return }
             snapshot = envelope
@@ -67,5 +75,7 @@ struct WatchHomeView: View {
     }
 }
 #if DEBUG
-#Preview("Watch · empty") { WatchHomeView(model: WatchModel()) }
+#Preview("Watch · empty") { WatchHomeView(model: WatchModel(debugScenario: "missing")) }
+#Preview("Watch · 847") { WatchHomeView(model: WatchModel(debugScenario: "normal")) }
+#Preview("Watch · over") { WatchHomeView(model: WatchModel(debugScenario: "over")) }
 #endif
